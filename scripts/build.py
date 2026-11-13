@@ -6,7 +6,7 @@
     python scripts/build.py --xml doc.xml   # 이미 변환한 hwp5proc XML 재사용(빠름)
     python scripts/build.py --no-pages      # 원문 페이지 이미지 생성 생략
 
-필요 패키지: pip install pyhwp pymupdf pillow
+필요 패키지: pip install pyhwp six pymupdf pillow
 """
 import argparse
 import html
@@ -63,7 +63,7 @@ def hwp_to_xml(hwp: Path) -> Path:
     cmd = [str(exe) if exe.exists() else "hwp5proc", "xml", str(hwp)]
     print("HWP 변환 중 (수 분 걸릴 수 있음):", hwp.name, flush=True)
     with open(out, "wb") as f:
-        subprocess.run(cmd, stdout=f, stderr=subprocess.DEVNULL, check=True)
+        subprocess.run(cmd, stdout=f, check=True)
     return out
 
 

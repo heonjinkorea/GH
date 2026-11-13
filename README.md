@@ -48,7 +48,7 @@ site/                 ← 웹사이트 (index.html, app.js, style.css)
 ## 내 PC에서 미리 보기
 
 ```bash
-pip install pyhwp pymupdf pillow
+pip install pyhwp six pymupdf pillow
 python scripts/build.py            # base/의 최신 편람 변환 (HWP 변환에 수 분 걸림)
 cd site && python -m http.server 8000
 # 브라우저에서 http://localhost:8000

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GH 산업단지 업무편람 도우미</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏭</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu-btn" id="menuBtn" aria-label="목차">☰</button>
+  <a class="brand" href="#/">🏭 <b>산업단지 업무편람</b> <span>도우미</span></a>
+  <nav class="tabs">
+    <a href="#/" data-tab="chat">💬 질문하기</a>
+    <a href="#/flow" data-tab="flow">🧭 업무 흐름</a>
+    <a href="#/s/p0-1-1" data-tab="read">📖 편람 보기</a>
+  </nav>
+  <span class="ver" id="ver"></span>
+</header>
+
+<div class="layout">
+  <aside class="toc" id="toc"></aside>
+  <main id="main"><div class="loading">편람을 불러오는 중…</div></main>
+</div>
+
+<div class="viewer" id="viewer" hidden>
+  <div class="viewer-bar">
+    <button data-v="prev">◀ 이전 쪽</button>
+    <span id="vPage"></span>
+    <button data-v="next">다음 쪽 ▶</button>
+    <button data-v="close" class="x">✕ 닫기</button>
+  </div>
+  <div class="viewer-body"><img id="vImg" alt="원문 페이지"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

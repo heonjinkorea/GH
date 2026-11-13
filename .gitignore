@@ -1,0 +1,11 @@
+# 빌드 결과물: GitHub Actions가 base/의 편람으로 매번 새로 만듭니다
+site/data/
+site/pages/
+
+# 폰트 묶음(라이선스 확인 전에는 올리지 않음)
+base/*.zip
+
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
